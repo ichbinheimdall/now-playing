@@ -4,7 +4,7 @@
 
 See what I'm currently listening to on Spotify — powered by [spotify-github-profile](https://github.com/kittinan/spotify-github-profile).
 
-[![License](https://img.shields.io/github/license/ichbinheimdall/what-am-i-listen-rn)](LICENSE)
+[![License](https://img.shields.io/github/license/ichbinheimdall/now-playing)](LICENSE)
 
 <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=ps3jyelec8p9sxp3hcmpoeznb&redirect=true">
 <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=ps3jyelec8p9sxp3hcmpoeznb&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true" alt="Now Playing" />
@@ -17,7 +17,7 @@ A single-file static page showing my current Spotify track. No backend, no API k
 
 ## Usage
 ```bash
-git clone https://github.com/ichbinheimdall/what-am-i-listen-rn
+git clone https://github.com/ichbinheimdall/now-playing
 open index.html
 ```
 
