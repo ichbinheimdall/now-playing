@@ -1,68 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: #111;">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="og:description" content="Sync your music journey with mine. Follow along with the songs I'm listening to in real-time or check out my latest picks with a click.">
-    <meta name="description" content="Experience the magic of syncing your music journey with mine on Spotify. Explore the tunes I'm currently vibing to in real-time, or catch up on the latest tracks I've enjoyed. Simply click on any song to tune in and join the rhythm.">
-    <meta name="keywords" content="heimdall253, 253sptfy, Heimdall253, 253sptfy, Sync, Music journey, Spotify, Real-time, Tracks, Listening, Refresh, Profile, Made with love, HMD">
-    <meta name="og:type" content="website">
-    <meta name="og:title" content="What Am I Listening Right Now?">
-    <meta http-equiv="content-language" content="en">
-    <title>What Am I Listening Right Now?</title>
-    <link rel="icon" type="image/gif/png" href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script type="text/javascript">
-        setTimeout(function() {
-          location.reload();
-        }, 120000); // 120 seconds = 120000 milliseconds
-      </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Listening Pulse</title>
+  <meta name="description" content="Real-time view of my current Spotify track." />
+  <link rel="icon" href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #111; color: #fff; font-family: system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+    main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem; }
+    button { background: #fff; color: #111; font-weight: 600; border: none; padding: .6rem 1rem; border-radius: .4rem; cursor: pointer; }
+    button:hover { background: #eee; }
+    img { max-width: 400px; width: 100%; border-radius: 8px; }
+    a { color: #fff; }
+    footer { text-align: center; padding: 1rem; opacity: .7; font-size: .85rem; }
+  </style>
 </head>
-<body style="background-color: #111;">
-    <section class="hero halfheight" style="text-align: center; margin-top: 50px;">
-        <center>
-            <button onClick="window.location.reload()" class="button-38" role="button">Refresh Song</button>
-        </center>
-    <br>
-        <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=ps3jyelec8p9sxp3hcmpoeznb&amp;redirect=true">
-        <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=ps3jyelec8p9sxp3hcmpoeznb&amp;cover_image=true&amp;theme=default&amp;show_offline=true&amp;background_color=121212&amp;interchange=true&amp;bar_color=53b14f&amp;bar_color_cover=true" alt="spotify-github-profile">
-        </a>
-    <br>
-        <span>
-            <a style="color: white;" href="https://hmd.bio/spotify"><strong>See Profile</strong></a></span>
-    </section>
-    <style>
-        .button-38 {
-            background-color: #FFF;
-            border: 0;
-            border-radius: .5rem;
-            box-sizing: border-box;
-            color: #111827;
-            font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            font-size: .875rem;
-            font-weight: 600;
-            line-height: 1.25rem;
-            padding: .75rem 1rem;
-            text-align: center;
-            text-decoration: none #d1d5db solid;
-            text-decoration-thickness: auto;
-            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06);
-            cursor: pointer;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-        }
-        .button-38:hover {
-            background-color: #f9fafb;
-        }
-        .button-38:focus {
-            outline: 2px solid transparent;
-            outline-offset: 2px;
-        }
-        .button-38:focus-visible {
-            box-shadow: none;
-        }
-    </style>
+<body>
+  <main>
+    <button onclick="refresh()">Refresh</button>
+    <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=ps3jyelec8p9sxp3hcmpoeznb&redirect=true">
+      <img id="card" src="https://spotify-github-profile.kittinanx.com/api/view?uid=ps3jyelec8p9sxp3hcmpoeznb&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true" alt="Now Playing" />
+    </a>
+    <p><a href="https://hmd.bio/spotify">See Profile</a></p>
+  </main>
+  <footer>Made by <a href="https://heimdalls.space">Heimdall</a></footer>
+  <script>
+    const BASE = 'https://spotify-github-profile.kittinanx.com/api/view?uid=ps3jyelec8p9sxp3hcmpoeznb&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true';
+    function refresh() { document.getElementById('card').src = BASE + '&t=' + Date.now(); }
+    setInterval(refresh, 60000);
+  </script>
 </body>
 </html>
