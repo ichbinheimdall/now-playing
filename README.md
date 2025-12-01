@@ -1,8 +1,8 @@
 <div align="center">
 
-# Listening Pulse
+# Now Playing
 
-Real-time view of my current Spotify track using [spotify-github-profile](https://github.com/kittinan/spotify-github-profile).
+See what I'm currently listening to on Spotify — powered by [spotify-github-profile](https://github.com/kittinan/spotify-github-profile).
 
 [![License](https://img.shields.io/github/license/ichbinheimdall/what-am-i-listen-rn)](LICENSE)
 
@@ -13,7 +13,7 @@ Real-time view of my current Spotify track using [spotify-github-profile](https:
 </div>
 
 ## About
-A minimal static page that embeds kittinan's Spotify profile card. No backend, no API keys—just HTML, CSS, and a tiny script for auto-refresh.
+A single-file static page showing my current Spotify track. No backend, no API keys — just one HTML file.
 
 ## Usage
 ```bash
